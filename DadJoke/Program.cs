@@ -13,8 +13,6 @@ builder.Services.AddControllers(c => {
   
 });
 
-
-
 builder.Services.AddAuthentication("ApiKey")
     .AddScheme<ApiKeyAuthenticationSchemeOptions, ApiKeyAuthenticationSchemeHandler>("ApiKey",
         opts => opts.ApiKey = configuration.GetValue<string>("api-key")
